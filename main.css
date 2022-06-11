@@ -1,0 +1,47 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.main-div {
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  background-color: red;
+  padding-top: 40vh;
+  overflow: hidden;
+  cursor: default;
+}
+
+.main-div h1 {
+  font-family: 'Otomanopee One', sans-serif;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  -webkit-transition: all .6s;
+  transition: all .6s;
+  font-size: 80px;
+}
+
+h1:last-child {
+  bottom: 150px;
+  left: 0px;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+h1:first-child:hover {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 0.1;
+}
+
+h1:first-child:hover + h1 {
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */

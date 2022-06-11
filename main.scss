@@ -1,0 +1,56 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.main-div{
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  background-color: red;
+  padding-top: 40vh;
+  overflow: hidden;
+  cursor: default;
+  h1{
+    font-family: 'Otomanopee One', sans-serif;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    transition: all .6s;
+    font-size: 80px;
+  }
+}
+
+
+@mixin nudge($dir, $amount){
+  @if $dir == "top"{
+    bottom: $amount
+  }@else if $dir == "bottom"{
+    top: $amount
+  }@else if $dir == "left"{
+    right: $amount
+  }@else if $dir == "right"{
+    left: $amount
+  }@else{
+    @warn "Incorrect argurment passed into nudge";
+  }
+}
+
+
+h1:last-child{
+  @include nudge("top", 150px);
+  @include nudge("right", 0px);
+  z-index:0;
+  opacity: 0.1;
+}
+
+h1:first-child:hover{
+  transform: scale(.7);
+  opacity: 0.1;
+}
+
+h1:first-child:hover + h1{
+  transform: scale(.7);
+  opacity: 1;
+}
