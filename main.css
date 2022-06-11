@@ -24,6 +24,10 @@
   -webkit-transition: all .6s;
   transition: all .6s;
   font-size: 80px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h1:last-child {
